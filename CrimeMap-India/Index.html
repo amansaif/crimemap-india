@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CrimeMap India</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-icon">📍</div>
+    <div>
+      <div style="display:flex;align-items:center;gap:7px">
+        <span class="logo-text">CrimeMap India</span>
+        <span class="badge">NCRB DATA</span>
+      </div>
+      <div class="logo-sub">40,160 crime records · 29 cities · 21 state women safety reports</div>
+    </div>
+  </div>
+ 
+  <div class="search-wrap">
+    <span class="s-icon">🔍</span>
+    <input type="text" id="searchInput" placeholder="Search city or state...">
+    <div id="srch-dd"></div>
+  </div>
+ 
+  <div class="score-filter">
+    <span>Min safety:</span>
+    <input type="range" min="0" max="75" value="0" id="filterSlider" oninput="filterChange(this.value)">
+    <span id="filter-val">0+</span>
+  </div>
+ 
+  <div class="mode-toggle">
+    <button class="mode-btn active" id="btnCity" onclick="setMode('city')">🏙 City Safety</button>
+    <button class="mode-btn" id="btnWomen" onclick="setMode('women')">♀ Women Safety</button>
+  </div>
+</header>
+ 
+<div class="app-body">
+  <div class="sidebar">
+    <div class="map-area" id="mapArea"></div>
+    <div class="city-list" id="cityList"></div>
+  </div>
+  <div class="main" id="mainPanel"></div>
+</div>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
