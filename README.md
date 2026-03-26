@@ -53,13 +53,39 @@ It helps users understand **safety levels, crime distribution, and trends** usin
 
 ## 📂 Project Structure
 
+```bash
+CrimeMap-India/
+├── index.html        # Main entry point (UI layout)
+├── styles.css        # Styling and responsive design
+├── script.js         # Core logic, map, charts, interactions
+├── dataset/          # Dataset files (optional / future use)
+├── README.md         # Project documentation
+└── LICENSE           # MIT License
 ```
-📁 CrimeMap-India
- ├── index.html
- ├── styles.css
- ├── script.js
- └── README.md
-```
+
+---
+
+## 📁 Description
+
+* **index.html** → Main webpage (dashboard UI)
+
+* **styles.css** → All UI styling (layout, colors, responsiveness)
+
+* **script.js** → Handles:
+
+  * Leaflet map
+  * Markers
+  * Charts (donut, ring, trends)
+  * Interactions (click, search, filter)
+
+* **dataset/** → Stores data files (CSV/JSON if used later)
+
+* **README.md** → Project details & instructions
+
+* **LICENSE** → Open-source license (MIT)
+
+---
+
 
 ---
 
